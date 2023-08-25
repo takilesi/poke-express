@@ -1,0 +1,63 @@
+.outerSpace{
+    width: 100vw; 
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(black,black,black,grey,blue);
+}
+.innerSpace{
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    /* top: 50%;  */
+    transform: translate(-50%,-50%);
+    border: solid blue; 
+    background-color: lightblue; 
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+}
+.title{
+    opacity: "0.6"; 
+    font-size: 10%;
+    position: fixed; 
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transform: rotate(-90deg);
+}
+.nameLabel{
+    
+    color: white; 
+    opacity: "0.6"; 
+    font-size: 5vh;
+    position: fixed; 
+    left: 50%; 
+    top: 5%;
+    transform: translate(-50%,-50%);
+    
+}
+.menuItems{
+    margin-left: 5%; 
+    height: 80%; 
+    width: 20%; 
+    border-color: solid black;
+    color: white; 
+}
+.words{
+    color: white; 
+}
+.img{
+    border-color: solid red;
+    position: absolute; 
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 70vh; 
+    width: 80vh; 
+    background-color: blue;
+}
+
+/* background-repeat: no-repeat;
+background-size: cover; */
+
+

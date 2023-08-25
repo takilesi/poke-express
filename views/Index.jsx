@@ -9,26 +9,29 @@ function Index(props) {
     
   return (
     <div className="outerSpace">
-      
-      
-        <h1 className="">See All The Pokemon</h1>
-        <a href="/new">Add New Pokemon </a>
-        <br></br>
-        <form action={`/addlist`} method="POST">
-          <input className='inputSubmit' type="submit" name="" value="Add Data" />
-        </form>
-        
-        {props.vermin.map((pokemon, i) => {
-          
-        return (
-          <div key={i}>
-            <a href={`/pokemon/${pokemon.id}`}>
-              <h2>{properNounPokemon(pokemon.name)}</h2>
-            </a>
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+      <div className="innerSpace">
 
-          </div>
-        );
-      })}   
+          
+            <h1 className="">See All The Pokemon</h1>
+            <a href="/new">Add New Pokemon </a>
+            <br></br>
+            <form action={`/addlist`} method="POST">
+              <input className='inputSubmit' type="submit" name="" value="Add Data" />
+            </form>
+            
+            {props.vermin.map((pokemon, i) => {
+              
+            return (
+              <div key={i}>
+                <a href={`/pokemon/${pokemon.id}`}>
+                  <h2>{properNounPokemon(pokemon.name)}</h2>
+                </a>
+
+              </div>
+            );
+          })}   
+      </div>
     </div>
   )
 }

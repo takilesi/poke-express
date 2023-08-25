@@ -7,27 +7,34 @@ function Show(props) {
     }
 
   return (
-    <div>
-        {/* <a href="../">go back</a> */}
-      <h1>Gotta Catch 'Em All</h1>
-      <a href={`/pokemon`}>Back to Index</a>
-      <br></br>
-      <a href={`/update/${props.pokemon.id}`}>Update</a>
-      <br></br>
-             {/* encapsulate DELETE in a form tag  */}
-      <form action={`/delete/${props.pokemon.id}?_method=DELETE`} method="POST">
-        <input className='inputSubmit' type="submit" name="" value="Delete Pokemon" />
-      </form>
-      <h2>
+    <div className="outerSpace">
+      <link rel="stylesheet" type="text/css" href="/style.css" />
+      <div className="title">
+        <p>Gotta Catch 'Em All</p>
+      </div>
+
+      <div className="menuItems">
+        <br></br>
+        <a className="words" href={`/pokemon`}>Back to Index</a>
+        <br></br>
+        <a className="words" href={`/update/${props.pokemon.id}`}>Update</a>
+        <br></br>
+              {/* encapsulate DELETE in a form tag  */}
+        <form action={`/delete/${props.pokemon.id}?_method=DELETE`} method="POST">
+          <input className='inputSubmit' type="submit" name="" value="Delete Pokemon" />
+        </form>
+      </div>
         
+        
+
+      <h2 className="nameLabel">
         {" "}
         Name: {properNounPokemon(props.pokemon.name) }
-        
       </h2>
-     
-        <br></br>
-        <img src={`${props.pokemon.img}.jpg`} />
-    </div>
+      
+         
+      <img className="img" src={`${props.pokemon.img}.jpg`} />
+    </div> // end outerSpace
   );
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 function PokeNew() {
     return (
-        <div>
+        <div className="outerSpace">
           <form action={`/newsubmit`} method="POST">
             Name: <input type="text" name="name"/>
             <br />
